@@ -11,7 +11,9 @@ module.exports = {
         customWhite: '#FAFAFA',
         customSkyBlue: '#0C66D6',
         borderColor: 'rgb(223,223,223,0.41)',
-        customGrey: '#C6C6C6'
+        customGrey: '#C6C6C6',
+        customHeadingColor: '#545454',
+        customTextColor : '#909090'
       }
     },
   },
