@@ -8,8 +8,11 @@ import monitor from '../assets/monitor.png'
 import playlist from '../assets/playlist.png'
 import './main.css'
 
+// Main Components - Includes 6 Boxes which contains different parameters and donut charts
+
 function Mainbody() {
 
+    // Data to Loop HTML Tags
     const statisticsName = ["Campaigns", "Channels", "Last Edited by", "Last Edited on"]
     const statisticsValues = ["8", "9/10", "Varun", "5 hours ago"]
     const liveStatisticsData = [
@@ -57,8 +60,8 @@ function Mainbody() {
                         </div>
                     ))}
                 </div>
-                <div className="w-full mt-5 flex">
-                    <div className="leftBottom w-3/5 grid grid-cols-2 grid-rows-2 gap-4">
+                <div className="w-full mt-5 block xl:flex">
+                    <div className="leftBottom w-5/5 xl:w-3/5 grid grid-cols-1 grid-rows-4 lg:grid-cols-2 lg:grid-rows-2 gap-4">
                         <div className="bg-customWhite p-4 border border-borderColor">
                             <h1 className="font-medium">General information</h1>
                             <div className="mt-2">
@@ -82,7 +85,7 @@ function Mainbody() {
                             <h1 className="font-medium">Live Statistics</h1>
                             <div className="flex w-full justify-center">
                                 {liveStatisticsData.map((item) => (
-                                    <div className="w-4/12 text-center">
+                                    <div className="w-4/12 lg:text-center">
                                         <Donut percentage={item.value} text={item.value} total={40} fontSize={34} />
                                         <button className="text-customSkyBlue border border-customSkyBlue hover:text-white hover:bg-customSkyBlue hover:border-white p-1 pl-3 pr-3 text-sm">{item.button}</button>
                                     </div>
@@ -91,7 +94,7 @@ function Mainbody() {
                         </div>
                         <div className="bg-customWhite p-4 border border-borderColor">
                             <h1 className="font-medium">Device Status</h1>
-                            <table className="mt-3">
+                            <table className="mt-3 w-full">
                                 <tr>
                                     <th className="font-normal text-customHeadingColor pt-2 pb-2 text-xs w-3/12 text-left">Device Name</th>
                                     <th className="font-normal text-customHeadingColor pt-2 pb-2 text-xs w-3/12 text-center">Status</th>
@@ -129,7 +132,7 @@ function Mainbody() {
                             ))}
                         </div>
                     </div>
-                    <div className="rightBottom w-2/5 pl-4">
+                    <div className="rightBottom w-5/5 xl:w-2/5 pl-4">
                         <div className="bg-customWhite p-4 mb-4 border border-borderColor">
                             <h1 className="font-medium">Location - Devices</h1>
                             <img src={map} className="mt-4 cursor-pointer" alt="Google Map" />

@@ -2,6 +2,8 @@ import account from '../assets/account.png';
 import headset from '../assets/headset.png';
 import notification from '../assets/notification.png';
 
+// Header Component - Includes 3 Icons
+
 function Header() {
     return (
         <div className="Header bg-customWhite p-4 flex justify-end">

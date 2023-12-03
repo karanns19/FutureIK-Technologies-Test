@@ -1,13 +1,11 @@
 import React from 'react';
 
+// Created this component to make Donut Chart for the Dashboard
+
 const Donut = ({ percentage, text, total, fontSize }) => {
-  const radius = 50; // Radius of the donut chart
-  const strokeWidth = 15; // Width of the donut chart
-
-  // Calculate the circumference of the circle
+  const radius = 50;
+  const strokeWidth = 15;
   const circumference = 2 * Math.PI * radius;
-
-  // Calculate the strokeDashoffset to represent the percentage
   const strokeDashoffset = ((total - percentage) / total) * circumference;
 
   return (

@@ -8,13 +8,15 @@ import plus from '../assets/plus.png'
 import zone from '../assets/zone.png'
 import media from '../assets/media.png'
 
+//Created Sidebar - Includes 8 Options
+
 function Sidebar() {
 
     const iconsImg = [plus, dashboard, campaign, command, zone, channels, devices, media]
     const iconsNames = ["Add Project", "Dashboard", "Campaigns", "Commands", "Zones", "Channels", "Devices", "Media Library"]
 
     return (
-        <div className="Sidebar bg-customBlue-light text-white pl-5 h-full">
+        <div className="Sidebar bg-customBlue-light text-white xl:pl-5 h-full">
             <div className="logo flex justify-start p-5">
                 <img src={companyLogo} width={120} alt="" />
             </div>
